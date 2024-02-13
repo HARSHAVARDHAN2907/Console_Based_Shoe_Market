@@ -245,11 +245,9 @@ class AfterPage{
         System.out.println("1.Search Sneakers");
         System.out.println("2.Order Sneakers");
         System.out.println("3.Add a sneaker to Cart");
-        System.out.println("4.Make an exchange or return query");
-        System.out.println("6.Check Return / Exchange Status");
-        System.out.println("7.Check Order History");
-        System.out.println("8.View My Cart");
-        System.out.println("5.Logout");
+        System.out.println("4.Check Order History");
+        System.out.println("5.View My Cart");
+        System.out.println("6.Logout");
         System.out.println();
         System.out.println("Enter a value");
         n=in.nextInt();
@@ -257,7 +255,7 @@ class AfterPage{
             System.out.println("Invalid Input...Try Again");
         }
         }while(!(n>=1 && n<=8));
-        if(n==5){
+        if(n==6){
             sup.signup();
             return;
         }
@@ -315,7 +313,7 @@ class AfterPage{
                 }
                 
         }
-        if(n==8){
+        if(n==5){
             System.err.println();
             int k = db.viewCart(id); 
             if(k==0){
@@ -338,7 +336,7 @@ class AfterPage{
                 System.out.println("failed");
             }
         }
-        if(n==7){
+        if(n==4){
             System.err.println();
             int k = db.viewOrders(id); 
             if(k==0){
@@ -362,6 +360,9 @@ class AfterPage{
             else{
                 System.out.println("failed");
             }
+        }
+        if(n==6){
+            System.out.println("Enter sneaker ID you want to return or ");
         }
         int choice;
         do{
